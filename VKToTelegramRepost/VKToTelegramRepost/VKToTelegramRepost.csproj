@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Logger\VkToTelegram.Logger.csproj" />
+    <ProjectReference Include="..\VKToTelegram.TelegramPoster\VKToTelegram.TelegramPoster.csproj" />
   </ItemGroup>
 
   <ItemGroup>

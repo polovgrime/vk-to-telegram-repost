@@ -41,7 +41,9 @@ namespace VkToTelegram.Logger
 
         public void Log(string message)
         {
+            message += $" |{DateTime.Now}";
             Console.WriteLine(message);
+            WriteToFile(message);
         }
 
         private void WriteToFile(string message)
@@ -53,6 +55,11 @@ namespace VkToTelegram.Logger
                     sw.WriteLine(message);
                 }
             }
+        }
+
+        public void Error(string message) 
+        {
+            Log("Error! " + message);
         }
     }
 }

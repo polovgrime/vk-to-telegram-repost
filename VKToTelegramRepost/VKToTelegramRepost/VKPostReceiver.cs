@@ -29,16 +29,20 @@ namespace VKToTelegramRepost
         {
             var group = api.Wall.Get(new WallGetParams()
             {
-                OwnerId = -groupId
+                OwnerId = -groupId,
+                Count = 100
             });
 
             var posts = group
-                .WallPosts.Where(e => e.Date > from)
+                .WallPosts
+                .Where(e => e.Date > from)
                 .Select(e => new PostDto
                 {
                     Images = GetPhotosUrls(e),
-                    Text = e.Text
+                    Text = e.Text,
+                    Url = $"wall-{groupId}_{e.Id}"
                 })
+                .Reverse()
                 .ToList();
 
             logger.Log(string.Join(",\n", posts));

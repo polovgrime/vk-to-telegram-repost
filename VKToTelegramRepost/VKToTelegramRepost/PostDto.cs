@@ -12,6 +12,8 @@ namespace VKToTelegramRepost
 
         public List<Uri> Images { get; set; } = new List<Uri>();
 
+        public string Url { get; set; } = string.Empty;
+
         public override string ToString()
         {
             return $"Text: {Text}, Images: {string.Join(", ", Images)}";
