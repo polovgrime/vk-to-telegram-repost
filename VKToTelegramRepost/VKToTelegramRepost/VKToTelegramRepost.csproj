@@ -12,6 +12,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Logger\VkToTelegram.Logger.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="C:\Users\horrest\.nuget\packages\nlog.schema\5.1.1\contentFiles\any\any\NLog.xsd">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Update="Settings.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

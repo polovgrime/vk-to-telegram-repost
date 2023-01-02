@@ -6,9 +6,14 @@ using System.Threading.Tasks;
 
 namespace VKToTelegramRepost
 {
-    class SettingsDto
+    class SettingsDto : IDto
     {
         public string Token { get; set; } = string.Empty;
-        public string Group { get; set; } = string.Empty;
+
+        public int Group { get; set; }
+
+        public string ChannelTg { get; set; } = string.Empty;
+
+        public string TokenTg { get; set; } = string.Empty;
     }
 }
